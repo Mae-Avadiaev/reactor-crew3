@@ -1,0 +1,103 @@
+.App {
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  outline: none;
+  width: 180px;
+}
+
+.Canvas {
+  /*display: flex;*/
+  /*align-items: flex-end;*/
+  /*justify-content: center;*/
+  background-color: #F5F5F5;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+.CommentButton {
+  width: 40px;
+  z-index: 10;
+  position: absolute;
+  bottom: 90px;
+  right: 50%;
+  cursor: url("./images/cursor.png"), auto;
+}
+
+.Comment {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+}
+
+.BlueCircle {
+  background-color: #4397F7;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  filter: drop-shadow(0 0 2px #4397F7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-radius 0.3s;
+}
+
+.CommentsCount {
+  color: white;
+  filter: drop-shadow(0 0 2px white);
+  font-weight: 700;
+  font-size: 1rem;
+  font-style: italic;
+  /*transition: opacity 0.3s;*/
+}
+
+.CommentsContainer {
+
+  display: flex;
+  flex-direction: column;
+  /*transition: opacity 0.3s;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+}
+
+.CommentInputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2B2B2B;
+  filter: drop-shadow(0 0 3px #343434);
+  border-radius: 7px;
+}
+
+.Input {
+  margin: 10px;
+  background-color: transparent;
+  outline: none;
+  color: white;
+  font-weight: 500;
+}
+
+.PostButton {
+  width: 24px;
+  filter: invert(50%);
+  margin-right: 8px;
+}
+
+.UserCommentContainer {
+  background-color: #2B2B2B;
+  filter: drop-shadow(0 0 3px #343434);
+  border-radius: 7px;
+  margin-top: 10px;
+  padding: 0 10px;
+  line-height: 0.7rem;
+  font-size: 0.85rem;
+}
+
+.UserComment {
+  color: white;
+}
