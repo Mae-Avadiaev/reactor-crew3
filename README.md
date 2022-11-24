@@ -1,5 +1,8 @@
 # reactor-crew3 v1.2
 
+## Video preview:
+https://youtu.be/aWp6GuNMYK0
+
 ## To run the app localy please paste into terminal:
 
 1. git clone https://github.com/Mitia-Avadiaev/reactor-crew3.git
