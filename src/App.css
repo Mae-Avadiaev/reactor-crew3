@@ -1,4 +1,5 @@
 .App {
+  box-sizing: border-box;
 }
 
 input {
@@ -36,28 +37,72 @@ input {
 }
 
 .BlueCircle {
-  background-color: #4397F7;
-  width: 40px;
-  height: 40px;
+  /*background-color: #2B2B2B;*/
+  /*width: 40px;*/
+  /*height: 40px;*/
   margin-right: 20px;
-  filter: drop-shadow(0 0 2px #4397F7);
+  /*filter: drop-shadow(0 0 2px #2B2B2B);*/
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: border-radius 0.3s;
+  justify-content: left;
+  /*align-items: center;*/
+  transition: all 0.2s;
+  /*border-radius: 0 50% 50% 50%;*/
+  overflow: hidden;
+  font-size: 0.8rem;
+  transform: rotatex(180deg);
+  transform-origin: top;
+  margin-top: 40px;
+
 }
 
-.CommentsCount {
+/*.BlueCircle:hover {*/
+/*  !*width: 200px;*!*/
+/*  !*height: auto;*!*/
+/*  !*border-radius: 0 18px 18px 18px !important;*!*/
+/*  !*align-items: flex-start;*!*/
+/*  !*padding: 10px;*!*/
+/*}*/
+
+.UserPhoto {
+  width: 30px;
+  border-radius: 50%;
+  margin-left: 5px;
+  transform: rotatex(180deg);
+  transition: opacity 0.3s;
+}
+
+.CommentPreviewDataContainer {
   color: white;
-  filter: drop-shadow(0 0 2px white);
-  font-weight: 700;
-  font-size: 1rem;
-  font-style: italic;
-  /*transition: opacity 0.3s;*/
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 200px;
+  transform: rotatex(180deg);
+}
+
+.NameAndDateContainer {
+  display: flex;
+}
+
+.UserName {
+  font-weight: 500;
+  margin: 0 5px 0 0;
+}
+
+.PostDate {
+  opacity: 80%;
+  margin: 0;
+}
+
+.InitialComment {
+  margin: 0;
 }
 
 .CommentsContainer {
-
   display: flex;
   flex-direction: column;
   /*transition: opacity 0.3s;*/
@@ -67,15 +112,16 @@ input {
 
 .CommentInputContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #2B2B2B;
   filter: drop-shadow(0 0 3px #343434);
   border-radius: 7px;
+  padding: 0 15px;
 }
 
 .Input {
-  margin: 10px;
+  margin: 12px 0;
   background-color: transparent;
   outline: none;
   color: white;
@@ -83,21 +129,112 @@ input {
 }
 
 .PostButton {
-  width: 24px;
+  width: 22px;
   filter: invert(50%);
-  margin-right: 8px;
+  /*margin-right: 8px;*/
+}
+
+.UserCommentAndMenuContainer {
+  display: flex;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .UserCommentContainer {
   background-color: #2B2B2B;
   filter: drop-shadow(0 0 3px #343434);
   border-radius: 7px;
-  margin-top: 10px;
-  padding: 0 10px;
-  line-height: 0.7rem;
+  padding: 15px;
+  /*line-height: 0.7rem;*/
   font-size: 0.85rem;
+  /*display: flex;*/
+  color: white;
+  width: 100%;
+  max-width: 400px;
+}
+
+.CommentDataAndMenuContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CommentDataContainer {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.UserPhotoComment {
+  width: 25px;
+  border-radius: 50%;
+}
+
+.UserNameComment {
+  margin: 0 7px;
+  font-weight: 600;
 }
 
 .UserComment {
-  color: white;
+  margin-left: 32px;
+  font-weight: 500;
+  margin-bottom: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 40px;
+}
+
+.UserCommentMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /*margin-left: 6px;*/
+  position: absolute;
+}
+
+.UserCommentButton {
+  background-color: #2B2B2B;
+  filter: drop-shadow(0 0 3px #343434);
+  border-radius: 7px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ReplyIcon {
+  filter: invert(100%);
+  width: 14px;
+  opacity: 70%;
+}
+
+.EditIcon {
+  filter: invert(100%);
+  width: 20px;
+  opacity: 80%;
+}
+
+.DeleteIcon {
+  filter: invert(100%);
+  width: 19px;
+  opacity: 80%;
+}
+
+/*.ReplyIndentation {*/
+/*  background-color: #2B2B2B;*/
+/*  margin: 0 9px;*/
+/*  width: 2px;*/
+/*  position: absolute;*/
+/*  top: -15px;*/
+/*  left: -29px;*/
+/*  !*filter: drop-shadow(0 0 3px #343434);*!*/
+/*}*/
+
+.EditInput {
+  margin-left: 32px;
+  margin-bottom: 2px;
+  font-size: 0.85rem;
+  font-weight: 500;
 }

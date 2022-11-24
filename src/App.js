@@ -9,7 +9,7 @@ function App() {
 
     const [isCommentToolSelected, setIsCommentToolSelected] = useState(false)
     const [isBlankComment, setIsBlankComment] = useState(false)
-    const [indexOfOpenedComment, setIndexOfOpenedComment] = useState(-1)
+    const [logOfOpenedComments, setLogOfOpenedComments] = useState([-1, -1])
 
     const selectCommentTool = () => {
         setIsCommentToolSelected(prevState => !prevState)
@@ -21,7 +21,7 @@ function App() {
         if (isCommentToolSelected)
             addComment(event)
         else
-            setIndexOfOpenedComment(-1)
+            setLogOfOpenedComments(prevState => [prevState[1], -1])
     }
 
     const removeBlankComment = () => {
@@ -29,10 +29,11 @@ function App() {
             prevState.pop()
             return [...prevState]
         })
+        setIsBlankComment(false)
     }
 
     const addComment = (event) => {
-        setIndexOfOpenedComment(commentsList.length)
+        setLogOfOpenedComments(prevState => [prevState[1], commentsList.length])
         setCommentsList(prevState => [
             ...prevState,
             {
@@ -41,7 +42,7 @@ function App() {
                 x: event.clientX,
                 y: event.clientY,
                 setIsBlankComment: setIsBlankComment,
-                setIndexOfOpenedComment: setIndexOfOpenedComment
+                setLogOfOpenedComments: setLogOfOpenedComments
             }
         ])
         setIsCommentToolSelected(false)
@@ -67,7 +68,8 @@ function App() {
                 return (
                     <Comment
                         {...comment}
-                        indexOfOpenedComment={indexOfOpenedComment}
+                        logOfOpenedComments={logOfOpenedComments}
+                        isBlankComment={isBlankComment}
                     />
                 )
             })}
