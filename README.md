@@ -1,4 +1,4 @@
-# reactor-crew3 
+# reactor-crew3 v1.2
 
 ## Video preview:
 https://youtu.be/aWp6GuNMYK0
